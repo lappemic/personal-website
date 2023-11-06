@@ -1,32 +1,82 @@
+/* CSS Variables for consistent theming */
+:root {
+    --primary-color: #343434;
+    --secondary-color: #535353;
+    --tertiary-color: #a0483d;
+    --fourtiary-color: #b4b0ab;
+    --fifthiary-color: #f6f6f6;
+    --font-family: "DM Sans", sans-serif;
+    --base-font-size: 62.5%; /* 10px */
+    --document-font-size: 1.6rem;
+    --heading-font-family: "Clear Sans", sans-serif;
+    --title-line-height: 6rem;
+    --line-height: 2.4rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins and paddings */
 body,
 h1,
 h2,
 h3,
-p {
-    font-size: 2rem;
-    font-family: "DM Sans", sans-serif;
-    margin: 50;
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+figcaption {
+    margin: 0;
     padding: 0;
 }
 
+/* Set base font size for responsive text scaling */
+html {
+    font-size: var(--base-font-size);
+}
+
+/* Body base styles */
+body {
+    font-family: var(--font-family);
+    font-size: var(--document-font-size);
+    line-height: var(--line-height);
+    color: var(--primary-color); /* Default text color */
+    background-color: var(--secondary-color);
+}
+
+/* Headings base styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font-family);
+    line-height: var(--title-line-height);
+}
+
 h1 {
-    font-size: 5rem;
-    font-family: "Clear Sans", sans-serif;
-    letter-spacing: 3px;
+    font-size: 5.6rem;
+    letter-spacing: 0.5rem;
+    padding-bottom: 5rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-weight: 400;
-    letter-spacing: 2px;
-    line-height: 130%;
-    padding-bottom: 1rem;
+    line-height: 120%;
+    padding-bottom: 3rem;
 }
 
-p {
-    font-size: 1rem;
-    font-weight: 200;
-    letter-spacing: 1px;
+h3 {
+    font-size: 2rem;
 }
 
 .clearfix::after {
@@ -41,10 +91,9 @@ p {
     text-decoration: none;
     background-color: #a0483d;
     color: #f6f6f6;
-    padding: 10px 20px;
-    border-radius: 50px;
+    padding: 1rem 6rem;
+    border-radius: 0.5rem;
     transition: background-color 0.3s ease;
-    font-size: 1rem;
 }
 
 .button-link:hover {
@@ -57,7 +106,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
-    gap: 20px;
+    gap: 2rem;
     height: 100vh;
     width: 100vw;
 }
@@ -77,14 +126,13 @@ p {
 
 .home_text {
     text-align: center;
-    padding-top: 40%;
+    padding-top: 20rem;
 }
 
 /* -------------- ABOUT -------------- */
 .about {
-    background-color: #b4b0ab;
-    padding: 1px;
-    color: #333;
+    background-color: var(--fourtiary-color);
+    color: var(--primary-color);
     height: 100vh;
     width: 100vw;
     overflow-y: auto;
@@ -98,7 +146,7 @@ p {
 }
 
 .about h1 {
-    padding-top: 10rem;
+    padding-top: 15rem;
     margin-bottom: 5rem;
     text-align: le;
 }
@@ -113,13 +161,11 @@ p {
     flex-direction: row;
     height: 100vh;
     width: 100vw;
-    font-size: 1.2rem;
 }
 
 .experience_light {
-    background-color: #f6f6f6;
-    padding: 20px;
-    padding-top: 100px;
+    background-color: var(--fifthiary-color);
+    padding-top: 5%;
     width: 66.66%;
     place-items: center;
     overflow-y: auto;
@@ -135,15 +181,14 @@ p {
     display: grid;
     grid-template-columns: min-content auto;
     align-items: start;
-    gap: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .year {
     font-weight: bold;
-    color: #343434;
-    white-space: nowrap; /* Ensures the year doesn't wrap */
+    white-space: nowrap;
 }
 
 .jobtitle,
@@ -154,34 +199,16 @@ p {
 
 .jobtitle {
     font-weight: bold;
-    color: #343434;
-    margin-bottom: 5px;
-}
-
-.company {
-    margin-bottom: 5px;
-}
-
-.description {
-    text-align: left;
-    color: #343434;
-    line-height: 1.6;
+    margin-bottom: 0.1rem;
 }
 
 .experience_dark {
-    background-color: #343434;
-    color: #b4b0ab;
+    background-color: var(--secondary-color);
+    color: var(--fourtiary-color);
     width: 33.33%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
-}
-
-h1 {
-    margin: 0;
-    font-size: 2em;
-    text-align: center;
 }
 
 /* -------------- EDUCATION -------------- */
@@ -254,7 +281,7 @@ h1 {
 
 h1 {
     margin: 0;
-    font-size: 2em;
+    /* font-size: 2em; */
     text-align: center;
 }
 
