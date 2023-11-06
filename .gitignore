@@ -1,0 +1,9 @@
+# Mac system files
+.DS_Store
+
+# IDE or editor folders
+.vscode/
+
+# dotenv environment variable files
+.env
+.env.test
