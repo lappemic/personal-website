@@ -4,6 +4,8 @@
 
 Welcome to the repository for my personal website! This project serves as a playground for me to get more familiar with HTML and CSS. As I learn and grow in my understanding of web development, I will continue to update and improve this site.
 
+You can view the deployed site here: [https://lappemic.github.io/personal-website/](https://lappemic.github.io/personal-website/)
+
 ## Project Status
 
 This website is very much a living document. It is neither perfect nor finished at the moment. As I learn more about web design and development, I plan to implement new features, refine the layout, and improve the overall user experience.
