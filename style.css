@@ -152,38 +152,58 @@ h3 {
 }
 
 .about p {
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
-/* -------------- EXPERIENCE -------------- */
-.experience_container {
+/* -------------- EXPERIENCE + EDUCATION -------------- */
+.main_listing_container {
     display: flex;
     flex-direction: row;
     height: 100vh;
     width: 100vw;
 }
 
-.experience_light {
+.light_container {
+    display: felx;
+    justify-content: center;
+    align-items: center;
     background-color: var(--fifthiary-color);
-    padding-top: 5%;
+    height: 100vh;
+    padding-top: 2%;
     width: 66.66%;
     place-items: center;
     overflow-y: auto;
 }
 
-.experience_light_container {
-    max-width: 800px;
+.light_container_eduction {
+    display: felx;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fifthiary-color);
+    height: 100vh;
+    padding-top: 15%;
+    width: 66.66%;
+    place-items: center;
+    overflow-y: auto;
+}
+
+.light_content_container {
+    max-width: 80rem;
     margin: auto;
     height: 100%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding-top: auto;
 }
 
 .one_position {
     display: grid;
     grid-template-columns: min-content auto;
     align-items: start;
-    gap: 2rem;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
+    column-gap: 8rem;
+    row-gap: 0.6rem;
+    /* padding-bottom: 1rem; */
+    margin-bottom: 2rem;
 }
 
 .year {
@@ -191,18 +211,18 @@ h3 {
     white-space: nowrap;
 }
 
-.jobtitle,
-.company,
+.title,
+.institution,
 .description {
     grid-column-start: 2;
 }
 
-.jobtitle {
+.title {
     font-weight: bold;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0rem;
 }
 
-.experience_dark {
+.dark_third_width {
     background-color: var(--secondary-color);
     color: var(--fourtiary-color);
     width: 33.33%;
@@ -211,90 +231,21 @@ h3 {
     justify-content: center;
 }
 
-/* -------------- EDUCATION -------------- */
-.education_container {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    width: 100vw;
-    font-size: 1.2rem;
-}
-
-/* Styles for the light section */
-.education_light {
-    background-color: #f6f6f6;
-    width: 66.66%;
-    place-items: center;
-}
-
-.education_light_container {
-    max-width: 800px;
-    margin: auto;
-    margin-top: 100px;
-    height: 100%;
-}
-
-.one_position {
-    display: grid;
-    grid-template-columns: min-content auto;
-    align-items: start;
-    gap: 20px;
-}
-
-.year {
-    font-weight: bold;
-    color: #343434;
-    white-space: nowrap;
-}
-
-.studyname,
-.school,
-.description {
-    grid-column-start: 2;
-}
-
-.studyname {
-    font-weight: bold;
-    color: #343434;
-    margin-bottom: 5px;
-}
-
-.school {
-    margin-bottom: 5px;
-}
-
-.description {
-    text-align: left;
-    color: #343434;
-    line-height: 1.6;
-}
-
-.education_dark {
-    background-color: #343434;
-    color: #b4b0ab;
-    width: 33.33%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-}
-
 h1 {
-    margin: 0;
-    /* font-size: 2em; */
     text-align: center;
 }
 
 /* -------------- SKILLS -------------- */
 .skills_content_container {
-    background-color: #f6f6f6;
+    background-color: var(--fifthiary-color);
     display: grid;
     height: 100vh;
     width: 100vw;
     grid-template-rows: auto 1fr;
     grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
-    padding: 100px;
+    row-gap: 1rem;
+    column-gap: 6rem;
+    padding: 10rem;
 }
 
 .skills_content_container > h1 {
@@ -302,91 +253,82 @@ h1 {
     text-align: left;
 }
 
-/* General progress bar definition */
+.skills_content_container p {
+    margin-bottom: 1rem;
+}
+
+.skill_name {
+    font-weight: bold;
+    padding-bottom: 4rem;
+}
+
 .progress_outer {
     background-color: grey;
     margin: 0;
-    padding: 2px;
+    padding: 0.4rem;
     width: 100%;
-    max-width: 500px;
-    height: 30px;
-    margin-bottom: 50px;
+    max-width: 50rem;
+    height: 3rem;
+    margin-bottom: 5rem;
 }
 
-.com_coll + .progress_outer .progress_inner {
+.progress_inner {
     height: 100%;
-    background-color: Black;
+    background-color: black;
 }
 
-/* ************** Subheaders ************** */
-.skill_name {
-    font-weight: bold;
-    color: #343434;
-    margin-bottom: 80px;
-}
-
-/* ************** Definition Progress Bars ************** */
 .com_coll + .progress_outer .progress_inner {
     width: 98%;
 }
 
 .prob_solv + .progress_outer .progress_inner {
-    height: 100%;
     width: 95%;
-    background-color: Black;
 }
 
 .leadership + .progress_outer .progress_inner {
-    height: 100%;
     width: 90%;
-    background-color: Black;
 }
 
 .python + .progress_outer .progress_inner {
-    height: 100%;
     width: 90%;
-    background-color: Black;
 }
 
 .docker + .progress_outer .progress_inner {
-    height: 100%;
     width: 80%;
-    background-color: Black;
 }
 
 .html + .progress_outer .progress_inner {
-    height: 100%;
     width: 70%;
-    background-color: Black;
 }
 
 .german + .progress_outer .progress_inner {
-    height: 100%;
     width: 100%;
-    background-color: Black;
 }
 
 .english + .progress_outer .progress_inner {
-    height: 100%;
     width: 95%;
-    background-color: Black;
 }
 
 .french + .progress_outer .progress_inner {
-    height: 100%;
     width: 80%;
-    background-color: Black;
 }
 
 /* -------------- CONTACT -------------- */
 .contact_container {
     background-color: black;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 20px;
+    gap: 0rem;
     height: 100vh;
     width: 100vw;
+}
+
+.contact_image {
+    display: flex;
+    height: 70%;
+    padding-left: 20%;
+    overflow: hidden;
 }
 
 .contact_container img {
@@ -395,55 +337,26 @@ h1 {
     object-fit: cover;
 }
 
-.contact_image {
-    height: 50%;
-    padding-left: 20%;
-    overflow: auto;
-}
-
 .contact_text_container {
-    color: white;
+    color: var(--fifthiary-color);
     text-align: left;
-    padding: 0 10%;
-}
-
-.contact_text_container h1 {
-    font-size: 1em;
-    margin-bottom: 6rem;
-    text-align: left;
-}
-
-.contact_text_container h2 {
-    font-size: 0.8em;
-    margin-bottom: 0;
-}
-
-.contact_text_container p {
-    font-size: 0.5em;
-    margin-top: 0;
+    padding: 0 5%;
 }
 
 .contact_text_container h3 {
-    font-size: 0.5em;
-    margin-top: 4em;
+    margin-top: 6rem;
 }
 
 .social_links {
     display: grid;
-    height: 10px;
+    height: 0.5rem;
     grid-template-columns: repeat(6, 1fr);
-    gap: 0px;
+    gap: 0;
     place-items: left;
 }
 
 .social_links img {
-    width: auto;
+    width: 4rem;
     height: 100%;
-    max-height: 80px;
-}
-
-.social_link {
-    color: white;
-    text-decoration: none;
-    margin-right: 5px;
+    max-height: 5rem;
 }
