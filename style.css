@@ -7,6 +7,7 @@
     --fifthiary-color: #f6f6f6;
     --font-family: "DM Sans", sans-serif;
     --base-font-size: 62.5%; /* 10px */
+    --base-font-size-mobile: 50%; /* 10px */
     --document-font-size: 1.6rem;
     --heading-font-family: "Clear Sans", sans-serif;
     --title-line-height: 6rem;
@@ -166,29 +167,28 @@ h3 {
 .main_listing_container {
     display: flex;
     flex-direction: row;
-    height: 100vh;
     width: 100vw;
 }
 
 .light_container {
-    display: felx;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--fifthiary-color);
-    height: 100vh;
+    height: auto;
     padding-top: 2%;
     width: 66.66%;
     place-items: center;
     overflow-y: auto;
 }
 
-.light_container_eduction {
-    display: felx;
+.light_container_education {
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--fifthiary-color);
     height: 100vh;
-    padding-top: 10%;
+    padding-top: 5%;
     width: 66.66%;
     place-items: center;
     overflow-y: auto;
@@ -366,4 +366,163 @@ h1 {
     width: 4rem;
     height: 100%;
     max-height: 5rem;
+}
+
+/* ###################################### */
+/* ############### MOBILE ############### */
+/* ###################################### */
+
+@media (max-width: 480) {
+    html {
+        font-size: var(--base-font-size-mobile);
+    }
+
+    h1 {
+        margin-top: 10%;
+    }
+
+    .home_container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .home_container img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .home_image {
+        grid-column: 1;
+        order: 2;
+    }
+
+    .home_text {
+        grid-column: 1;
+        order: 1;
+    }
+
+    .about {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .about-content {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .about h1,
+    .about p {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .main_listing_container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .dark_third_width {
+        order: -1;
+        width: 100%;
+        height: auto;
+    }
+
+    .light_container,
+    .light_container_education,
+    .dark_third_width {
+        width: 100%;
+        height: auto;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        align-self: center;
+        padding: 10%;
+    }
+
+    .light_content_container {
+        margin-top: 4rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .one_position {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        row-gap: 0.8rem;
+        column-gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .year {
+        white-space: nowrap;
+    }
+
+    .title {
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .institution,
+    .description {
+        width: 100%;
+    }
+
+    .skills_content_container {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill_container {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .progress_outer {
+        width: 100%;
+    }
+
+    .contact_container {
+        display: grid;
+        display: block;
+        background-color: black;
+        height: auto;
+    }
+
+    .contact_image {
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+        order: 1;
+        padding-top: 10%;
+    }
+
+    .contact_text_container {
+        width: 80%;
+        height: auto;
+        color: var(--fifthiary-color);
+        object-fit: cover;
+        padding-left: 30%;
+        padding-top: 10%;
+        order: 2;
+        text-align: center;
+    }
+
+    .social_links {
+        display: grid;
+        height: auto;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: left;
+        padding-bottom: 5rem;
+    }
+
+    .social_links img {
+        width: 4rem;
+        height: 100%;
+        max-height: 5rem;
+    }
 }
