@@ -301,11 +301,11 @@ h1 {
 }
 
 .docker + .progress_outer .progress_inner {
-    width: 80%;
+    width: 75%;
 }
 
 .html + .progress_outer .progress_inner {
-    width: 70%;
+    width: 60%;
 }
 
 .german + .progress_outer .progress_inner {
